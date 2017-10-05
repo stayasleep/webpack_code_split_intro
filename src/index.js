@@ -21,16 +21,31 @@ function addBtn(){
 		console.log('Alas poor yorick, i knew him, Horatio!');
 		//this makes an async call and returns a promise
 		System.import('./subtract').then(function(module){
-		    console.log('27-4 = ',module.default(27,12));
+		    console.log('27-12 = ',module.default(27,12));
 		});
 
-	}
+	};
 	return btn;
 }
+
+function addAnotherBtn(){
+	var btn = document.createElement('button');
+	btn.innerText="Divide something by zero";
+	btn.onclick=function(){
+		console.log("et tu, brute");
+
+		System.import('./math').then(function(module){
+			console.log('6/0 = ',module.divide(6,0));
+		});
+	};
+	return btn;
+}
+
 
 
 addToDom(addHeader());
 addToDom(addDiv());
 addToDom(addBtn());
+addToDom(addAnotherBtn());
 
 

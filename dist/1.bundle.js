@@ -1,0 +1,1 @@
+webpackJsonp([1],{4:function(e,n,t){"use strict";function i(e,n){return e*n}function u(e,n){return n?e/n:"Cannot divide by zero!"}Object.defineProperty(n,"__esModule",{value:!0}),n.multiply=i,n.divide=u}});
