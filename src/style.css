@@ -3,3 +3,8 @@
 	font-size: 48px;
 }
 
+.fix-to-bottom{
+	position: fixed;
+    bottom: 10px;
+    right: 0;
+}

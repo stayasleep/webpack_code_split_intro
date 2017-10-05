@@ -2,6 +2,7 @@ import {addToDom} from './helper';
 import add from './add';
 import './style.css';
 import logo from './chinch.jpg';
+import jchinch from './jas.jpg';
 
 function addHeader(){
 	var header = document.createElement('h1');
@@ -45,11 +46,23 @@ function addAnotherBtn(){
 	return btn;
 }
 
+function addImg(src, className){
+    var img = new Image();
+    img.src = src;
+    if(className){
+        img.classList.add(className);
+    }
+
+    return img;
+}
 
 
 addToDom(addHeader());
+addToDom(addImg(jchinch));
 addToDom(addDiv("total of 56+82 = "+ add(56,82)));
 addToDom(addBtn());
 addToDom(addAnotherBtn());
+addToDom(addImg(logo,'fix-to-bottom'));
+
 
 

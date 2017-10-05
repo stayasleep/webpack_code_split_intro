@@ -6,6 +6,7 @@ module.exports = {
         filename: "bundle.js",
         path: path.resolve(__dirname,'dist')
     },
+    devtool: 'inline-source-map',//from the website of pkg
     //module gets obj and rule gets an array of obj
     module: {
         rules:[
