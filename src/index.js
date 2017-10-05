@@ -1,16 +1,18 @@
 import {addToDom} from './helper';
 import add from './add';
-
+import './style.css';
+import logo from './chinch.jpg';
 
 function addHeader(){
 	var header = document.createElement('h1');
 	header.innerText = "Vanilla JS ftw";
+	header.classList.add('main-header');
 
 	return header;
 }
-function addDiv(){
+function addDiv(text){
 	var div = document.createElement('div');
-	div.innerText = "The total of 56 and 82 is " + add(56,82);
+	div.innerText = text;
 	return div
 }
 
@@ -36,6 +38,8 @@ function addAnotherBtn(){
 
 		System.import('./math').then(function(module){
 			console.log('6/0 = ',module.divide(6,0));
+
+			addToDom(addDiv('6/0 = '+ module.divide(6,0)));
 		});
 	};
 	return btn;
@@ -44,7 +48,7 @@ function addAnotherBtn(){
 
 
 addToDom(addHeader());
-addToDom(addDiv());
+addToDom(addDiv("total of 56+82 = "+ add(56,82)));
 addToDom(addBtn());
 addToDom(addAnotherBtn());
 
